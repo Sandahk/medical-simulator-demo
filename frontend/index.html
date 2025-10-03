@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Medical Phase Simulator</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1>Medical Phase Simulator</h1>
+
+  <!-- Controls bar -->
+  <form id="uploadForm" class="toolbar">
+    <input type="file" id="fileInput" accept="image/jpeg,image/png,image/jpg,.jpg,.jpeg,.png" hidden />
+    <div id="dropZone" class="drop-zone" tabindex="0">
+      <span class="dz-title">Trascina qui l'immagine o clicca per scegliere</span>
+      <span class="dz-file" id="dzFileName">Nessun file scelto</span>
+    </div>
+
+    <label class="radio">
+      <input type="radio" name="phase" value="arterial" checked />
+      Arteriosa
+    </label>
+    <label class="radio">
+      <input type="radio" name="phase" value="venous" />
+      Venosa
+    </label>
+
+    <button type="submit" id="processBtn">Elabora immagine</button>
+    <button type="button" id="downloadBtn" class="ghost" disabled>Scarica risultato</button>
+  </form>
+
+  <div id="msg" class="msg" aria-live="polite"></div>
+
+  <!-- Two-column preview area -->
+  <section class="pane-grid">
+    <div class="pane">
+      <div class="pane-title">Originale</div>
+      <div class="pane-body">
+        <img id="original" alt="Originale" />
+      </div>
+    </div>
+    <div class="pane">
+      <div class="pane-title">Elaborata</div>
+      <div class="pane-body">
+        <img id="processed" alt="Elaborata" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Inline status just under the images -->
+  <div id="statusInline" class="status-inline" aria-live="polite" aria-atomic="true">
+    <span id="statusIcon" class="icon" aria-hidden="true"></span>
+    <span id="statusText"></span>
+  </div>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

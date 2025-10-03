@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  medical-simulator:
+    build: .
+    container_name: medical-simulator
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./backend:/app/backend
+      - ./frontend:/app/frontend
+      - ./main.py:/app/main.py
+      - ./requirements.txt:/app/requirements.txt
