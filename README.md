@@ -26,6 +26,7 @@ so changes are reflected instantly without rebuilding.
 
 ---
 ## 🛠️ Run locally (Python)
+Recommended: use **Python 3.11** for easiest setup (avoids Pillow build issues on macOS).
 
 ```bash
 # create and activate venv
