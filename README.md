@@ -1,3 +1,12 @@
+---
+title: Medical Simulator Demo
+emoji: 🩺
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 # Medical Simulator Demo
 
 A simple demo project combining **FastAPI** (backend) and a small **HTML/CSS/JS frontend**  to simulate CT-slice phase processing (**arterial** vs **venous**).  
