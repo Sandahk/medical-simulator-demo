@@ -98,4 +98,3 @@ python client_process.py --image CTA_Slice.jpg --phase venous --out venous.png
    ✅ On success: *Elaborazione completata*.  
 6. Download your processed result.
 7. You can always find the log file in your root folder "backend.log".
-

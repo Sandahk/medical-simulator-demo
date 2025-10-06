@@ -18,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from typing import Literal
 from pathlib import Path
 
-from backend.processing import (
+from .processing import (
     load_image, simulate_arterial, simulate_venous, to_png_bytes
 )
 
