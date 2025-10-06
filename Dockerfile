@@ -16,5 +16,5 @@ COPY frontend /app/frontend
 COPY main.py /app/main.py
 
 EXPOSE 7860
+CMD ["python", "-m", "uvicorn", "backend.app:app", "--host", "0.0.0.0", "--port", "7860"]
 
-CMD ["uvicorn", "backend.app:app", "--host", "0.0.0.0", "--port", "7860", "--reload"]
