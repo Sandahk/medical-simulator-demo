@@ -9,7 +9,10 @@ pinned: false
 
 # Medical Simulator Demo
 
-A simple demo project combining **FastAPI** (backend) and a small **HTML/CSS/JS frontend**  to simulate CT-slice phase processing (**arterial** vs **venous**).  
+A small full-stack demo that combines a **FastAPI** backend with a plain **HTML/CSS/JS** frontend to simulate CT-slice phase processing (**arterial** vs **venous**).
+
+> Built as a take-home technical exercise. The image processing is a visual simulation (contrast, sharpening, blur), not a clinical or diagnostic tool.
+
 ---
 
 ## 🚀 Features
@@ -18,7 +21,7 @@ A simple demo project combining **FastAPI** (backend) and a small **HTML/CSS/JS 
 - Simulate **venous phase** (smoothing / blur)
 - Preview **original (left)** and **processed (right)** images
 - Status messages with icons (⏳ processing, ✅ done, ⚠️ error)
-- Download processed results (Not requested - Extra feature)
+- Download processed results (extra feature beyond the brief)
 
 ---
 
@@ -76,7 +79,7 @@ medical-simulator-demo/
 └── .gitignore
 ```
 
-## 📂Testing with Python client (Optional)
+## 🧪 Testing with the Python client (optional)
 For quick testing without the browser, a helper script client_process.py is included. It uploads an image to the backend and saves the processed result. To use this script, you should have the main.py running in the background. Place your input image in the root and:
 
 ```
@@ -97,4 +100,4 @@ python client_process.py --image CTA_Slice.jpg --phase venous --out venous.png
 5. ⏳ Status shows *Processing…*  
    ✅ On success: *Elaborazione completata*.  
 6. Download your processed result.
-7. You can always find the log file in your root folder "backend.log".
+7. Backend logs are written to `backend.log` in the project root.
